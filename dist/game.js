@@ -2924,5 +2924,14 @@ vec4 frag(vec3 pos, vec2 uv, vec4 color, sampler2D tex) {
     addKaboom(mousePos());
   });
   onKeyPress("b", burp);
+  onTouchStart(() => {
+    add([
+      pos(15, 300),
+      text("You cannot play this game on a mobile telephone!", {
+        size: "24",
+        font: "sink"
+      })
+    ]);
+  });
 })();
 //# sourceMappingURL=game.js.map

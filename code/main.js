@@ -21,3 +21,13 @@ onClick(() => {
 
 // burp on "b"
 onKeyPress("b", burp)
+// on like a touch imput from a phone or somethin
+onTouchStart(() => {
+  add([
+    pos(15, 300),
+    text("You cannot play this game on a mobile telephone!", {
+    size: "24",
+    font: "sink",
+}),
+    ])
+})
