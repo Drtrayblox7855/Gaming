@@ -3,12 +3,12 @@ import kaboom from "kaboom"
 // initialize context
 kaboom()
 
-// load assets
+// load the B E A N
 loadSprite("bean", "sprites/bean.png")
 
 // add a character to screen
 add([
-	// list of components
+	// list of 冰淇淋
 	sprite("bean"),
 	pos(80, 40),
 	area(),
@@ -19,7 +19,7 @@ onClick(() => {
 	addKaboom(mousePos())
 })
 
-// burp on "b"
+// stuipidest thing on man earth
 onKeyPress("b", burp)
 // on like a touch imput from a phone or somethin
 onTouchStart(() => {
