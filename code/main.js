@@ -31,5 +31,8 @@ onTouchStart(() => {
 }),
     ])
 })
-// oh shit 
+// oh crap
 onTouchMove(burp)
+onTouchEnd(() => {
+  addKaboom()
+})
