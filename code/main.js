@@ -31,3 +31,5 @@ onTouchStart(() => {
 }),
     ])
 })
+// oh shit 
+onTouchMove(burp)
