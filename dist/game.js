@@ -2915,6 +2915,7 @@ vec4 frag(vec3 pos, vec2 uv, vec4 color, sampler2D tex) {
   // code/main.js
   no();
   loadSprite("bean", "sprites/bean.png");
+  loadSprite("Burp", "sprites/Burp.png");
   add([
     sprite("bean"),
     pos(80, 40),
@@ -2925,17 +2926,16 @@ vec4 frag(vec3 pos, vec2 uv, vec4 color, sampler2D tex) {
   });
   onKeyPress("b", burp);
   onTouchStart(() => {
-    add([
+    addKaboom(mousePos()), add([
       pos(15, 300),
-      text("You cannot play this game on a mobile telephone!", {
+      text("Game not available!", {
         size: "24",
         font: "sink"
       })
     ]);
   });
-  onTouchMove(burp);
-  onTouchEnd(() => {
-    addKaboom();
+  onTouchMove(burp, () => {
+    addKaboom(mousePos());
   });
 })();
 //# sourceMappingURL=game.js.map
