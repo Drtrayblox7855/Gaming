@@ -2914,12 +2914,20 @@ vec4 frag(vec3 pos, vec2 uv, vec4 color, sampler2D tex) {
 
   // code/main.js
   no();
+  var SPEED = 320;
   loadSprite("bean", "sprites/bean.png");
   loadSprite("Burp", "sprites/Burp.png");
-  add([
+  loadSprite("Grass", "sprites/Grass.png");
+  var you = add([
     sprite("bean"),
-    pos(80, 40),
-    area()
+    pos(80, 80),
+    area(),
+    origin("center")
+  ]);
+  add([
+    sprite("Grass"),
+    pos(12, 20),
+    scale(2)
   ]);
   onClick(() => {
     addKaboom(mousePos());
@@ -2936,6 +2944,12 @@ vec4 frag(vec3 pos, vec2 uv, vec4 color, sampler2D tex) {
   });
   onTouchMove(burp, () => {
     addKaboom(mousePos());
+  });
+  OnTouchEnd(() => {
+    addKaboom(mousePos());
+  });
+  onKeyDown("D", () => {
+    you.move(-SPEED, 0);
   });
 })();
 //# sourceMappingURL=game.js.map
